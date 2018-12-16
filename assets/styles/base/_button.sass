@@ -1,0 +1,22 @@
+@mixin btn($bg, $fg, $border)
+  background: $bg
+  color: $fg
+  // border: 1px solid transparent
+  font-weight: 500
+  text-decoration: none
+  font-size: 1.2rem
+  cursor: pointer
+  line-height: 2
+  padding: $s/2 $s
+  letter-spacing: 1px
+  display: inline-block
+  ouline: none
+  > *
+    color: inherit !important
+
+
+.btn
+  @include btn($action-bg, $action-fg, $action-border)
+  &:hover
+    color: $action-hover-fg
+    background: $action-hover-bg
